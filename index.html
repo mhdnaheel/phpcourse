@@ -1,12 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-     <h1>Hello world</h1>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--table-->
+    <table border="1" style="border-collapse: collapse;">
+        <thead>
+          <tr>
+            <th>&nbsp S.N &nbsp</th>
+            <th>&nbsp Item &nbsp</th>
+            <th>&nbsp Quantity &nbsp</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            
+            <td><center>1</center></td>
+            <td><center>Apple</center></td>
+            <td><center>2</center></td>
+          </tr>
+          <tr>
+            <td><center>2</center></td>
+            <td><center>Mango</center></td>
+            <td><center>2</center></td>
+          </tr>
+          <tr>
+            <td><center>3</center></td>
+            <td><center>Orange</center></td>
+            <td><center>1</center></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2"><center><b>Total</b></center></td>
+            <td><center>5</center></td>
+          </tr>
+        </tfoot>
+      </table>
+      <br><hr><br>
+    <!--List-->
+      <!--unorder list-->
+      <ul>
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Mango</li>
+      </ul>
+      <br><hr><br>
+      <!--order list-->
+      <ol>
+        <li>Ready</li>
+        <li>Set</li>
+        <li>Go</li>
+      </ol>
+      <br><hr><br>
+      <!--description list-->
+      <dl>
+        <dt><b>HTML:</b></dt>
+        <dd>Hyper-Text Markup Language</dd>
+        <dt><b>CSS:</b></dt>
+        <dd>Cascading StyleSheets</dd>
+        <dt><b>JS:</b></dt>
+        <dd>Javascript</dd>
+      </dl>
+      <br><hr><br>
+    <!--Form and Input-->
+    <div >
+      
+      <form >
+    
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name.."><br><br>
+    
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br><br>
+    
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="Syria">Syria</option>
+          <option value="UAE">UAE</option>
+          <option value="SAU">SAU</option>
+        </select><br><br>
+    
+        <label for="subject">Subject</label><br>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea><br><br>
+    
+        <input type="submit" value="Submit">
+    
+      </form>
+    
+    </div>
+</body>
 </html>
