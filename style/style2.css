@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.item{
+    background-color: aqua;
+    border: black solid 2px;
+    margin: 10px;
+    width: 100px;
+    display: inline-block;
+
+}
+
+.inlineitem{
+    
+    border: red solid 2px;
+    margin: 20px;
+    width: 200px;
+    display: inline-block;
+}
