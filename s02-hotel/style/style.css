@@ -1,0 +1,35 @@
+/* .nav{
+background-color: #f1f1f1;
+padding: 10px;
+} */
+
+ul{
+background-color: #e6c7c7;
+list-style: none;
+display: flex;
+width: 100%;
+margin: 5px;
+}
+
+ul>li{
+    margin: 10px 50px;
+}
+
+ul>li>a{
+    text-decoration: none;
+}
+.side{
+    display: flex;
+    width: 100%;
+    align-self: center;
+}
+/* img{
+    width: 50%;
+} */
+.image{
+    display: flex;
+    width: 200%;
+}
+.container{
+    display: flex;
+}
