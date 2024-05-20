@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Contact us Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+<script >
+   vars = ["first name","last name","email","website","your message"];
+   function validateForm() {
+    console.log("validate>>>>>>>>>>>");
+     
+    vars.forEach(element => {
+        x = document.forms["myForm"][element].value;
+    if (x == "") {
+      alert(element+" must be filled out");
+      return false;
+    }
+    });
+    
+  }
+</script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+      <div class="text">
+         Contact us Form
+      </div>
+      <form name="myForm" action="#">
+         <div class="form-row">
+            <div class="input-data">
+               
+               <input type="text" name="first name" >
+               <div class="underline"></div>
+               <label for="">First Name</label>
+            </div>
+            <div class="input-data">
+               <input type="text" name="last name" >
+               <div class="underline"></div>
+               <label for="">Last Name</label>
+            </div>
+         </div>
+         <div class="form-row">
+            <div class="input-data">
+               <input type="text" name="email" >
+               <div class="underline"></div>
+               <label for="">Email Address</label>
+            </div>
+            <div class="input-data">
+               <input type="text" name="website" >
+               <div class="underline"></div>
+               <label for="">Website Name</label>
+            </div>
+         </div>
+         <div class="form-row">
+         <div class="input-data textarea">
+            <textarea rows="8" cols="80" name="your message" ></textarea>
+            <br />
+            <div class="underline"></div>
+            <label for="">Write your message</label>
+            <br />
+            <div class="form-row submit-btn">
+               <div class="input-data">
+                  <div class="inner"></div>
+                  <input type="submit" onclick="validateForm()" value="submit">
+               </div>
+            </div>
+      </form>
+      </div>
+<!-- partial -->
+  
+</body>
+</html>
