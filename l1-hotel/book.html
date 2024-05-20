@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TipTop Hotel</title>
+    
+</head>
+<body>
+<div class="nav">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#services">Services</a>
+            </li>
+            <li>
+                <a href="#about">About Us</a>
+            </li>
+            <li>
+                <a href="#contact">Conatct Us</a>
+            </li>
+            <li>
+                <a href="book.html">Book</a>
+            </li>
+        </ul>
+</div>
+<div class="container">
+    <div class="part1">
+        <img src="hotel.webp" alt="">
+     </div>
+     <div class="part2">
+         <form id="booking-form" action="confirmation.html" method="GET">
+             <label for="name">Name:</label>
+             <input type="text" id="name" name="name" required>
+             <label for="email">Email:</label>
+             <input type="email" id="email" name="email" required>
+             <label for="check-in">Check-in Date:</label>
+             <input type="date" id="check-in" name="check-in" required>
+             <label for="check-out">Check-out Date:</label>
+             <input type="date" id="check-out" name="check-out" required>
+ 
+             <!-- Payment method section -->
+             <h2>Payment Method</h2>
+             <label for="card-number">Card Number:</label>
+             <input type="text" id="card-number" name="card-number" required>
+             <label for="expiration-date">Expiration Date:</label>
+             <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YY" required>
+             <label for="cvv">CVV:</label>
+             <input type="text" id="cvv" name="cvv" required>
+             
+             <!-- Optional: Accept terms and conditions -->
+             <label>
+                 <input type="checkbox" id="terms" name="terms">
+                 I accept the terms and conditions
+             </label>
+ 
+             <button type="submit">Book Now</button>
+         </form>
+      </div>
+</div>
+
+</body>
+</html>
