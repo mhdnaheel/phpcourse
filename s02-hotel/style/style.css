@@ -21,7 +21,7 @@ ul>li>a{
 .side{
     display: flex;
     width: 100%;
-    align-self: center;
+    align-self: flex-start;
 }
 /* img{
     width: 50%;

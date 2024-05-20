@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src=""></script> -->
+    <style>
+        #rec{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body onload="chnageImg()">
+    <script>
+        // let a =2;
+        // var b = 3;
+        // const c = "hello";
+        // console.log(a);
+        // console.log(b);
+        // console.log(c);
+        // {
+        //     let a = 6;
+        //     var b = 9;
+        //     console.log(a);
+        //     console.log(b);
+        // }
+        // console.log(b);
+        // const Names = {fname:"MHD","lname":"NAHEEL","age":40};
+        // food = ["pizza","rice","checken" ];
+        // console.log(Names);
+        // Names["lname"]="";
+        // console.log(Names);
+        // food.push("beef");
+        // console.log(food);
+        
+        // function alertfun(){
+        //     alert("hello js");
+        // }
+        // alertfun();
+
+        // const alertfun = function(){alert("hello js");}
+        // alertfun();
+
+        // const alertfun = ()=>{alert("hello js");}
+        // alertfun();
+
+        // (function(){
+        //     alert("hi");
+        // })();
+        function clickme(){
+            document.getElementById("test").innerHTML="Hello world";
+            document.getElementById("test").style.fontSize="75px";
+        }
+
+        function chnageImg(){
+            setTimeout(function(){
+                document.getElementById("loading").style.display="none",5000
+            },2000)
+        }
+
+        function setRec(){
+            document.getElementById("rec").style.width="500px";
+            document.getElementById("rec").style.backgroundColor="red";
+        }
+        function setRec1(){
+            document.getElementById("rec").style.width="200px";
+            document.getElementById("rec").style.backgroundColor="blue";
+        }
+        
+    </script>
+    <button onclick="clickme()">click me</button>
+    <h1 id="test">hello</h1>
+    <div id="rec" onmouseenter="setRec()" onmouseleave="setRec1()"></div>
+    <div id="loading">
+        <img src="200w.gif" alt="">
+    </div>
+    
+</body>
+</html>
