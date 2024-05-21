@@ -2,13 +2,12 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Contact us Form</title>
+  <title> Contact us Form</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel="stylesheet" href="./style.css">
 <script >
    vars = ["first name","last name","email","website","your message"];
    function validateForm() {
-    console.log("validate>>>>>>>>>>>");
      
     vars.forEach(element => {
         x = document.forms["myForm"][element].value;
@@ -16,6 +15,17 @@
       alert(element+" must be filled out");
       return false;
     }
+    });
+    
+  }
+  function resetForm(){
+  
+   
+    vars.forEach(element => {
+        document.forms["myForm"][element].value = "";
+   
+      return false;
+    
     });
     
   }
@@ -27,35 +37,35 @@
       <div class="text">
          Contact us Form
       </div>
-      <form name="myForm" action="#">
+      <form name="myForm" novalidate action="#">
          <div class="form-row">
             <div class="input-data">
                
-               <input type="text" name="first name" >
+               <input type="text" name="first name" required>
                <div class="underline"></div>
                <label for="">First Name</label>
             </div>
             <div class="input-data">
-               <input type="text" name="last name" >
+               <input type="text" name="last name" required>
                <div class="underline"></div>
                <label for="">Last Name</label>
             </div>
          </div>
          <div class="form-row">
             <div class="input-data">
-               <input type="text" name="email" >
+               <input type="text" name="email" required>
                <div class="underline"></div>
                <label for="">Email Address</label>
             </div>
             <div class="input-data">
-               <input type="text" name="website" >
+               <input type="text" name="website" required>
                <div class="underline"></div>
                <label for="">Website Name</label>
             </div>
          </div>
          <div class="form-row">
          <div class="input-data textarea">
-            <textarea rows="8" cols="80" name="your message" ></textarea>
+            <textarea rows="8" cols="80" name="your message" required></textarea>
             <br />
             <div class="underline"></div>
             <label for="">Write your message</label>
@@ -64,6 +74,10 @@
                <div class="input-data">
                   <div class="inner"></div>
                   <input type="submit" onclick="validateForm()" value="submit">
+               </div>
+               <div class="input-data">
+                  <div class="inner"></div>
+                  <input type="submit" onclick="resetForm()" value="cancle">
                </div>
             </div>
       </form>
