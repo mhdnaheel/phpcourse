@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./jquery.js"></script>
+    <!-- <script href="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+</head>
+<body>
+    
+    
+    <div id="myForm">
+        <form action="">
+            <label for="uname">Name</label>
+            <input type="text" name="" id="uname">
+            <label for="email">email</label>
+            <input type="email" name="" id="email">
+            <label for="age">Age</label>
+            <input type="text" name="age" id="age">
+            <button type ="button" id="add">Add</button>
+        </form>
+    </div>
+    <table id="mytable">
+        <thead>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Age</td>
+            <td>Actions</td>
+        </thead>
+        <tbody>
+          
+        </tbody>
+    </table>
+    <script>
+        var e='<tr><td colspan="4">No Record Available!</td></tr>';
+       
+        $(document).ready(function(){
+            $("#mytable tbody").append(e);
+            $("#add").click(function(){
+                var uname =$("#uname").val();
+                var email =$("#email").val();
+                var age =$("#age").val();
+                if(uname==""||email==""||age==""){
+                    alert("you should provide all values");
+                }
+                else{
+                    var addRow=`<tr><td>`+uname+`</td><td>`+email+`</td><td>`+age+`</td><td><button class="edit">Edit</button><button class="delete">Delete</button></td></tr>`;
+                        if($("#mytable tbody").children().children().length==1){
+                            $("#mytable tbody").html("");
+                        }
+                        $("#mytable tbody").append(addRow);
+                        $("#uname").val("");
+                        $("#email").val("");
+                        $("#age").val("");
+                        $(".edit").click(function(){
+                            var selectedRow=$(this).parent().parent();
+                            var cells=selectedRow.find("td");
+                            $("#uname").val(cells.eq(0).text());
+                            $("#email").val(cells.eq(1).text());
+                            $("#age").val(cells.eq(2).text());
+                            selectedRow.remove();});
+                        $(".delete").click(function(){
+                            $(this).parent().parent().remove();
+                            if($("#mytable tbody").children().children().length==0){
+                                $("#mytable tbody").append(e);
+                            }
+                        })
+                        
+
+                        };
+
+                }
+            );
+        });
+    </script>
+</body>
+</html>
